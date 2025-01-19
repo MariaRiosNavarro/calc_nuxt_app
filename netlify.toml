@@ -1,13 +1,12 @@
 [build]
   command = "pnpm build"
-  publish = ".output/public"
-  edge_functions = true
+  publish = "dist"
+  functions = ".netlify/functions-internal"
 
 [build.environment]
   NODE_VERSION = "18"
-  NETLIFY_EDGE_FUNCTIONS = "true"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions-internal/server"
   status = 200

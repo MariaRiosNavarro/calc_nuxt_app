@@ -1,6 +1,13 @@
 [build]
   command = "pnpm build"
   publish = ".output/public"
+  edge_functions = true
 
 [build.environment]
   NODE_VERSION = "18"
+  NETLIFY_EDGE_FUNCTIONS = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

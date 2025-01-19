@@ -1,16 +1,9 @@
 import { defineNuxtConfig } from "nuxt/config";
-
+// nuxt.config.ts
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
-  css: ['~/assets/css/main.css'],
-
+  modules: ["@nuxtjs/tailwindcss"],
   nitro: {
-    preset: 'netlify'
+    preset: "netlify",
   },
-
-  ssr: true,
-  generate: {
-    fallback: true
-  }
-})
+});

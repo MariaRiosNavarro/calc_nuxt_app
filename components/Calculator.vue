@@ -101,3 +101,33 @@ const handleInput = (value: string) => {
   }
 };
 </script>
+
+<style scoped>
+.calculator-container {
+  @apply max-w-xs mx-auto bg-gray-800 p-4 rounded-lg shadow-lg;
+}
+
+.display {
+  @apply bg-gray-700 text-white text-right p-4 text-2xl rounded mb-4 min-h-[60px];
+}
+
+.keypad {
+  @apply grid grid-cols-4 gap-2;
+}
+
+.calculator-button {
+  @apply bg-gray-600 text-white p-4 text-xl rounded hover:bg-gray-500 transition-colors duration-200;
+}
+
+.calculator-button:nth-child(4n) {
+  @apply bg-orange-500 hover:bg-orange-400;
+}
+
+.calculator-button:nth-child(13) {
+  @apply bg-red-500 hover:bg-red-400;
+}
+
+.calculator-button:nth-child(15) {
+  @apply bg-green-500 hover:bg-green-400;
+}
+</style>
